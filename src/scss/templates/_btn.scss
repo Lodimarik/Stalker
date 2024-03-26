@@ -1,0 +1,43 @@
+@import "../cta.scss";
+@import "../mixins.scss";
+
+.btn {
+    display: inline-block;
+    padding: 1.4rem 8.5rem;
+    background: $clr-primary-yellow;
+    font-size: $font-size-xs;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: $clr-white;
+    transition: $transition-fast;
+    &:hover {
+        background-color: $clr-hover-yellow;
+        transform: translateY(-4px);
+        border-radius: 1.4rem;
+        -webkit-border-radius: 1.4rem;
+    }
+    &:active {
+        @include click();
+    }
+}
+
+.btn-small {
+    display: inline-block;
+    background: $clr-primary-yellow;
+    font-size: $font-size-x;
+    padding: 1.4rem 2.2rem;
+    font-family: "Montserrat", sans-serif;
+    text-align: end;
+    text-transform: uppercase;
+    color: $clr-white;
+    transition: $transition-fast;
+    &:hover {
+        background-color: $clr-hover-yellow;
+        transform: scale(1.05);
+        border-radius: 1.2rem;
+}
+    &:active {
+        @include click();
+    }
+}

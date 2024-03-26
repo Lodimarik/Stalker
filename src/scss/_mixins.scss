@@ -1,0 +1,38 @@
+@mixin respond-to($media) {
+    @if $media=='phone' {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+
+    @else if $media=='laptop' {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+@mixin click() {
+    position: relative;
+    top: 0.1rem;
+}
+
+@mixin title() {
+    font-family: "Montserrat", sans-serif;
+    font-size: $font-size-xl;
+    text-transform: uppercase;
+    color: $clr-primary-brown;
+    font-weight: 700;
+}
+
+@mixin flex-row($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-column($align:center) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+}

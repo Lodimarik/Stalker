@@ -1,0 +1,60 @@
+@import "../../../cta.scss";
+@import "../../../mixins.scss";
+
+.main {
+    .container {
+        .cart-empty {
+            width: 897px;
+            margin: 6.2rem auto 0;
+            text-align: center;
+            .text {
+                margin-top: 3.8rem;
+            }
+            .cart-img {
+                margin-top: 3.8rem;
+                img {
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+                    &:hover {
+                        animation-name: shake;
+                        animation-duration: 3s;
+                        animation-timing-function: ease-in-out;
+                        animation-iteration-count: infinite;
+                    }
+                }
+            }
+            .btn {
+                margin-top: 3.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .main{
+        .container{
+            max-width: 32.7rem;
+
+            .path{
+                display: none;
+            }
+
+            .cart-empty{
+                width: 297px;
+
+                .text{
+                    font-size: $font-size-m;
+                }
+                .cart-img{
+                    img{
+                        width: 63px;
+                        height: 56px;
+                    }
+                }
+            }
+        }
+    }
+}
